@@ -1,0 +1,12 @@
+.legal {
+    #site-footer & {
+        text-transform: uppercase;
+        font-family: $font-serif;
+        padding-bottom: 16px;
+        @include inuit-font-size(8px, 18px);
+        @include font-weight('thin');
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

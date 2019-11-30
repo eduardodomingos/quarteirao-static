@@ -5,4 +5,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    #site-footer & {
+        @include mq($from: tablet) {
+            float: right;
+        }
+    }
 }
