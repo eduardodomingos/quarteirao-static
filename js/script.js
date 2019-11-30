@@ -7,6 +7,7 @@
         };
 
         var breakpoints = {
+            sTablet:  576,
             tablet:  768,
             desktop: 992,
             wide:    1200
@@ -18,8 +19,9 @@
             if(window.innerWidth < breakpoints.tablet) {
                 listImagesSlider();
             }
-
+            
             $(window).resize(function(e){
+                // Init/Destroy list images slider on resize
                 if(window.innerWidth < breakpoints.tablet) {
                     if(!$('.list-images').hasClass('slick-initialized')){
                         listImagesSlider();
@@ -30,6 +32,35 @@
                     }
                 }
             });
+
+            // Gallery
+            $('.slider').slick({
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: breakpoints.tablet,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: breakpoints.sTablet,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+
+
+
         }
 
         // Global functions

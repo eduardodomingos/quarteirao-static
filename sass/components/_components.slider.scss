@@ -1,0 +1,15 @@
+.slider {
+    .home & {
+        img {
+            @include mq($from: s-tablet) {
+                margin: 50px 0px;
+                transition: all 500ms ease;
+                opacity: .5;
+            }
+            &.slick-center {
+                opacity: 1;
+                transform: translateY(-50px);
+            }
+        }   
+    }
+}
