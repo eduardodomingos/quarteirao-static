@@ -1,0 +1,13 @@
+.block {
+    h1,
+    h2 {
+        @include inuit-font-size(30px, 30px);
+        margin-bottom: 42px;
+    }
+    .text {
+        font-family: $font-serif;
+        @include inuit-font-size(12px, 18px);
+        @include font-weight('regular'); 
+        font-style: italic;
+    }
+}

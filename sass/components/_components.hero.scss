@@ -11,29 +11,9 @@
         margin: 0;
         max-width: 60%;
         li {
-            @include font-weight('bold');
-            font-size: 30px;
-            line-height: 30px;
+            @extend %headings;
             color: $color-white;
-            text-transform: uppercase;
-            letter-spacing: -0.05em;
-            span {
-                position: relative;
-                display: inline-block;
-                z-index: 0;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: 104%;
-                    height: 15px;
-                    transform: translate(-50%,-50%);
-                    z-index: -1;
-                }
-                &.orange:before { background-color: $color-orange; }
-                &.green:before { background-color: $color-green; }
-            }
+            @include inuit-font-size(30px, 30px);
         }
     }
 

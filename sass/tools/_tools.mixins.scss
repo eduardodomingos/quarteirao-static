@@ -44,7 +44,7 @@
         @for $i from $from through $to{
 
             h#{$i} {
-                @extend %base-heading;
+                @extend %base-heading!optional;
             }
 
         }
