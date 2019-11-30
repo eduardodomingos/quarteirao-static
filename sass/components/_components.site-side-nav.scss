@@ -1,0 +1,18 @@
+#site-side-nav {
+    position: fixed;
+    top: $site-header-height-s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-white;
+    //padding: $unit;
+    transition: $transition;
+    z-index: 999;
+    transform: translateX(-100%);
+    .side-nav-open & {
+        transform: translateX(0);
+    }
+    @include mq($from: desktop) {
+        display: none;
+    }
+}

@@ -1,9 +1,8 @@
 #site-header {
-    height: $site-header-height-s;
     position: relative;
-    background: #ddd;
-
-    #cheeseburger {
-        
+    z-index: 1;
+    > .container {
+        position: relative;
+        height: $site-header-height-s;
     }
 }

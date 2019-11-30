@@ -187,7 +187,11 @@ $inuit-static-images: false;
 // Build and include your project’s UI components here.
 @import "components/components.site-header";
 @import "components/components.site-main-nav";
+@import "components/components.site-side-nav";
 @import "components/components.site-logo";
+@import "components/components.site-cheeseburger";
+@import "components/components.site-content";
+@import "components/components.hero";
 // @import "components/components.buttons";
 // @import "components/components.site";
 // @import "components/components.hero";
