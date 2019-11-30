@@ -1,0 +1,6 @@
+#site-main-nav {
+    display: none;
+    @include mq($from: tablet) {
+        display: block;
+    }
+}
