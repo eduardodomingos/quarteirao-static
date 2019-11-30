@@ -181,6 +181,8 @@ $inuit-static-images: false;
 // @import "../node_modules/bootstrap/scss/utilities";
 // @import "../node_modules/bootstrap/scss/print";
 
+// PLUGINS
+@import "../node_modules/slick-carousel/slick/slick.scss";
 
 // COMPONENTS
 //
@@ -193,6 +195,7 @@ $inuit-static-images: false;
 @import "components/components.site-content";
 @import "components/components.hero";
 @import "components/components.block";
+@import "components/components.lists";
 // @import "components/components.buttons";
 // @import "components/components.site";
 // @import "components/components.hero";
@@ -226,4 +229,5 @@ $inuit-static-images: false;
 // @import "../node_modules/inuitcss/utilities/utilities.print";
 @import "../node_modules/inuitcss/utilities/utilities.hide";
 @import "utilities/utilities.text";
+@import "utilities/utilities.layout";
 @import "utilities/utilities.accessibility";

@@ -1,0 +1,11 @@
+.sm-fullwidth {
+    @include mq($until: tablet) {
+        width: 100vw;
+        position: relative;
+        left: 50%;  
+        transform: translateX(-50%);
+        img {
+            width: 100%;
+        }
+    }
+}

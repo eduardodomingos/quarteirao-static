@@ -1,4 +1,6 @@
 .block {
+    padding-top: 50px;
+    padding-bottom: 50px;
     h1,
     h2 {
         @include inuit-font-size(30px, 30px);

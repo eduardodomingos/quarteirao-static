@@ -11,7 +11,8 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
-    "inuitcss": "^6.0.0"
+    "inuitcss": "^6.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
