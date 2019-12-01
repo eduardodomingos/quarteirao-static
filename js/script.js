@@ -58,12 +58,35 @@
                 ]
             });
 
-
-
-
+            // FAQS
+            $('#faqs .btn-more').click(function(){
+                if($(this).hasClass('active')) {
+                     $('.faqs-list li:not(.active)').hide(350);
+                }
+                else {
+                    $('.faqs-list li:not(.active)').show(350);
+                }
+                $(this).toggleClass('active');
+            });
         }
 
-        // Global functions
+        // Accordion
+        $('.accordion .toggle').click(function(e) { 
+            var $this = $(this);
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show');
+                $this.next().slideUp(350);
+            } else {
+                $this.parent().parent().find('.inner').removeClass('show');
+                $this.parent().parent().find('.inner').slideUp(350);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(350);
+            }
+        });
+
+        // ######################################################
+        // Global Functions
+        // ######################################################
         function listImagesSlider() {
             $('.list-images').slick({
                 autoplay: true,

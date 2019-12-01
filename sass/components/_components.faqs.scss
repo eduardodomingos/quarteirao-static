@@ -1,0 +1,25 @@
+#faqs {
+    #site-footer & {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include font-size(12px, 25px);
+    .faqs-list {
+        list-style: none;
+        margin: 0;
+        li {
+            margin-bottom: 25px;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        p {
+            margin-bottom: 0;
+            &.question {
+                @include font-weight('bold');
+                cursor: pointer;
+            }
+        }
+    }
+}
