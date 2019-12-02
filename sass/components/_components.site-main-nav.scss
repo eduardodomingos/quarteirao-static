@@ -19,11 +19,6 @@
                 color: $color-white;
                 padding: 5px 20px;
             }
-            &.current-menu-item a {
-                text-decoration: underline;
-                opacity: 1;
-                @include font-weight('bold');
-            }
         }
     }
 
@@ -39,6 +34,11 @@
                 a {
                     color: $color-grey;
                     padding: 5px 20px;
+                }
+                &.active a {
+                    text-decoration: underline;
+                    opacity: 1;
+                    @include font-weight('bold');
                 }
             }
         }

@@ -14,6 +14,7 @@
             wide:    1200
         }
 
+
         // @ Homepage
         if( dom.$body.hasClass('home') ) {
             stickyHeader();
@@ -72,6 +73,10 @@
                 $(this).toggleClass('active');
             });
         }
+
+        // Menu Spy
+        var elm = document.querySelector('#site-header-cloned');
+        var ms = new MenuSpy(elm);
 
         // Accordion
         $('.accordion .toggle').click(function(e) { 
