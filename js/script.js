@@ -62,6 +62,12 @@
                 ]
             });
 
+            $('.modal-slider').slick({
+                arrows: false,
+                dots: true,
+                autoplay: true
+            });
+
             // FAQS
             $('#faqs .btn-more').click(function(){
                 if($(this).hasClass('active')) {
