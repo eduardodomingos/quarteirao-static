@@ -195,8 +195,19 @@ $inuit-static-images: false;
 @import "components/components.site-content";
 @import "components/components.hero";
 @import "components/components.block";
-@import "components/components.lists";
+@import "components/components.text";
+@import "components/components.title";
+@import "components/components.list-images";
+
+
+
+
+
+
+
+
 @import "components/components.slider";
+@import "components/components.timeline";
 @import "components/components.counter";
 @import "components/components.teaser";
 @import "components/components.buttons";
@@ -237,6 +248,5 @@ $inuit-static-images: false;
 // @import "../node_modules/inuitcss/utilities/utilities.responsive-spacings";
 // @import "../node_modules/inuitcss/utilities/utilities.print";
 @import "../node_modules/inuitcss/utilities/utilities.hide";
-@import "utilities/utilities.text";
 @import "utilities/utilities.layout";
 @import "utilities/utilities.accessibility";

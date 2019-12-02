@@ -1,0 +1,31 @@
+.c-text {
+    font-family: $font-serif;
+    @include inuit-font-size(12px, 18px);
+    @include font-weight('regular'); 
+    font-style: italic;
+    text-align: justify;
+
+    ul {
+        font-family: $font-sans;
+        font-style: normal;
+        @include font-weight('semi-bold');
+        @include inuit-font-size(13px, 23px);
+        letter-spacing: -0.005em;
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 24px;
+            &:before {
+                content: '+';
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include inuit-font-size(20px, 23px);
+                color: $color-green;
+            }
+        }
+    }
+}

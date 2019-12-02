@@ -1,9 +1,0 @@
-.text-sm-right {
-    @include mq($until: tablet) {
-        text-align: right;
-    }
-}
-
-// .text-right {
-//     text-align: right;
-// }
