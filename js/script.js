@@ -4,6 +4,7 @@
         var dom = {
             $window:            $(window),
             $body:              $('body'),
+            $siteHeader:        $('#site-header')
         };
 
         var breakpoints = {
@@ -15,6 +16,8 @@
 
         // @ Homepage
         if( dom.$body.hasClass('home') ) {
+            stickyHeader();
+
             // On mobile, list images become a slider
             if(window.innerWidth < breakpoints.tablet) {
                 listImagesSlider();
@@ -91,6 +94,23 @@
             $('.list-images').slick({
                 autoplay: true,
                 arrows: false
+            });
+        }
+
+        function stickyHeader() {
+            dom.$siteHeader
+            .clone()
+            .insertBefore( '#site-header' )
+            .attr( 'id', function(i, str) { return str + '-cloned';} );
+            dom.$siteHeaderClone = $('#site-header-cloned');
+            var winH = dom.$window.height();   // Get the window height.
+
+            dom.$window.on("scroll", function () {
+                if ($(this).scrollTop() > winH ) {
+                    dom.$siteHeaderClone.addClass('sticky');
+                } else {
+                    dom.$siteHeaderClone.removeClass('sticky');
+                }
             });
         }
     });

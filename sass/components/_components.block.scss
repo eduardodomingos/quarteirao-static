@@ -5,6 +5,14 @@
     h2 {
         @include inuit-font-size(30px, 30px);
         margin-bottom: 42px;
+        @include mq($from: desktop) {
+            @include inuit-font-size(35px, 39px);
+            max-width: 80%;
+            &.big {
+                max-width: none;
+                @include inuit-font-size(55px, 58px);
+            }
+        }
     }
     .text {
         font-family: $font-serif;

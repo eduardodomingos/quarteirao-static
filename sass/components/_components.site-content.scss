@@ -1,5 +1,8 @@
 #site-content {
     .home & {
-        margin-top: -$site-header-height-s;
+        margin-top: -$site-header-height-m;
+        @include mq($from: desktop) {
+            margin-top: -$site-header-height-d;
+        }
     }
 }

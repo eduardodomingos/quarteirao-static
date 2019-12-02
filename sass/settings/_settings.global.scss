@@ -1,5 +1,10 @@
-$site-header-height-s: 60px;
+$site-header-height-m: 60px;
+$site-header-height-t: 60px;
+$site-header-height-d: 130px;
 
-$site-hero-height-s: 350px;
+$site-hero-height-m: 350px;
+$site-hero-height-t: 350px;
+$site-hero-height-d: 100vh;
 
 $transition: all .4s ease;
+$text-shadow: 1px 1px 5px rgba($color-grey, 10%);

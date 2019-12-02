@@ -5,6 +5,12 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    #site-header-cloned & {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
     #site-footer & {
         @include mq($from: tablet) {
             float: right;

@@ -2,7 +2,7 @@ a {
     $color: $color-grey;
 	text-decoration: none;
     transition: $transition;
-    opacity: .8;
+    opacity: .85;
 	cursor: pointer;
 
 	@include attention() {

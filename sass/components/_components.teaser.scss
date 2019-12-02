@@ -27,7 +27,7 @@
             left: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
-            text-shadow: 1px 1px 5px rgba($color-grey, 10%);
+            text-shadow: $text-shadow;
             color: $color-white;
             text-transform: uppercase;
             h1 {
