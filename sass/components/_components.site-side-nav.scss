@@ -5,7 +5,6 @@
     right: 0;
     bottom: 0;
     background: $color-white;
-    padding: 50px 20px;
     transition: $transition;
     z-index: 999;
     transform: translateX(-100%);
@@ -13,6 +12,14 @@
     @include inuit-font-size(14px, 18px);
     text-transform: uppercase;
     text-align: center;
+
+    .header {
+        height: $site-header-height-m;
+        position: relative;
+        box-shadow: $box-shadow;
+        margin-bottom: 10px;
+    }
+
     li {
         &.active a {
             text-decoration: underline;
@@ -40,7 +47,11 @@
 
     .side-nav-close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        padding: 0;
     }
 }

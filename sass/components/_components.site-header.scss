@@ -17,7 +17,7 @@
     width: 100%;
     transition: $transition;
     background-color: #fff;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.4);
+    box-shadow: $box-shadow;
     z-index: 1;
     @include mq($from: desktop){
         top: -$site-header-height-d - 10px;

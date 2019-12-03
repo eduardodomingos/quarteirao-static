@@ -1,6 +1,6 @@
 .c-timeline {
     height: $timelineHeight;
-    .c-timeline-events {
+    .events {
         position: relative;
         height: 100%;
         ul {
@@ -92,102 +92,6 @@
                     font-size: 24px;
                     font-size: 1.5rem;
                     line-height: 1.25;
-                }
-            }
-        }
-    }
-
-    .c-timeline-modals {
-        .modal {
-            height: 100vh;
-            background: rgba($color-black, .85);
-            color: $color-white;
-            position: fixed;
-            width: $timelineModal-width-s;
-            top: 0;
-            left: -$timelineModal-width-s;
-            z-index: 1;
-            transition: $transition;
-            &.active {
-                left: 0;
-            }
-            @include mq($from: desktop) {
-                width: $timelineModal-width-d;
-                left: -$timelineModal-width-d - 10px;;         
-            }
-        
-            .modal-close {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-            }
-            
-            .modal-inner {
-                padding: 60px 50px;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                @include mq($from: desktop) {
-                    padding: 80px 50px;
-                }
-                .modal-slider {
-                    list-style: none;
-                    margin: 0;
-                    margin-bottom: 25px;
-                    .slick-dots {
-                        list-style: none;
-                        margin: 0;
-                        display: flex;
-                        justify-content: center;
-                        padding-top: 20px;
-                        li {
-                            margin: 0 0.25rem;
-                            &.slick-active button {
-                                background-color: $color-orange;
-                            }
-                        }
-                        
-                        button {
-                            display: block;
-                            width: 8px;
-                            height: 8px;
-                            padding: 0;
-                            border: none;
-                            border-radius: 100%;
-                            background-color: $color-white;
-                            text-indent: -9999px;
-                            outline: none;
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .title{
-                    @include mq($from: desktop) {
-                        @include inuit-font-size(45px, 27px);
-                    }
-                }
-                .lead {
-                    @include inuit-font-size(23px, 27px);
-                    @include font-weight('bold');
-                    text-transform: uppercase;
-                }
-                .text-wrapper {
-                    font-family: $font-serif;
-                    @include inuit-font-size(14px, 17px);
-                    overflow-y: scroll;
-                    > *:last-child {
-                        margin-bottom: 0;
-                    }
-                    position: relative;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-image: linear-gradient( rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100% );
-
-                    }
                 }
             }
         }

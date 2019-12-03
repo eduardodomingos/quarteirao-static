@@ -1,10 +1,18 @@
 .site-logo {
+    display: inline-block;
+    #site-side-nav &,
     #site-header &,
     #site-header-cloned & {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 140px;
+    }
+    #site-header & {
+        @include mq($from: desktop) {
+            width: 277px;
+        }
     }
     #site-header-cloned & {
         @include mq($from: desktop) {
@@ -13,6 +21,7 @@
         }
     }
     #site-footer & {
+        width: 140px;
         @include mq($from: tablet) {
             float: right;
         }

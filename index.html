@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700|IBM+Plex+Serif:400,400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700|IBM+Plex+Serif:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home">
@@ -16,8 +17,9 @@
             </button>
 
             <a href="/" class="site-logo" rel="home">
-                <img src="https://via.placeholder.com/100x50" alt="Qurteirão da Portugália">
+                <img src="assets/images/logo-white.svg" alt="Quarteirão da Portugália">
             </a>
+
             <nav class="site-main-nav">
                 <ul>
                     <li><a href="#enquadramento">Enquadramento</a></li>
@@ -31,7 +33,14 @@
     </header>
     
     <nav id="site-side-nav">
-        <button class="side-nav-close">Fechar</button>
+        <div class="header">
+            <button class="side-nav-close">
+                <img src="https://via.placeholder.com/50x50" alt="">
+            </button>
+            <a href="/" class="site-logo" rel="home">
+                <img src="assets/images/logo-black.svg" alt="Qurteirão da Portugália">
+            </a>
+        </div>
         <ul>
             <li><a href="#enquadramento">Enquadramento</a></li>
             <li><a href="#projeto">Projeto</a></li>
@@ -49,7 +58,7 @@
                 </video>
             </div>
             <ul>
-                <li>Um novo quarteirão para os <span class="orange">Lisboetas</span></li>
+                <li class="c-title">Um novo quarteirão para os <span class="orange">Lisboetas</span></li>
             </ul>
         </section>
 
@@ -90,7 +99,7 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="c-timeline">
-                            <div class="c-timeline-events">
+                            <div class="events">
                                 <ul>
                                     <li style="width: calc(100% / 7);">
                                         <div class="event" id="event-2009">
@@ -135,8 +144,8 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="c-timeline-modals">
-                                <div class="modal" id="modal-2009">
+                            <div class="modals">
+                                <div class="c-modal" id="modal-2009">
                                     <button class="modal-close">Fechar</button>
                                     <div class="modal-inner">
                                         <ul class="modal-slider">
@@ -162,7 +171,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm col-lg-7">
-                        <ul class="c-list-images">
+                        <ul class="c-list-images wow fadeInLeft fast">
                             <li><img src="assets/images/img1.jpg" alt=""></li>
                             <li><img src="assets/images/img2.jpg" alt=""></li>
                         </ul>
@@ -184,7 +193,7 @@
                             <h2 class="c-title c-title-sm-right">“(...) uma <span>entidade urbana</span> totalmente articulada e orquestrada (...)”</h2>
                         </div>
                         <div class="col-sm col-lg-4 offset-lg-1">
-                            <div class="c-text">
+                            <div class="c-text wow fadeInRight fast">
                                 <figure>
                                     <img src="assets/images/img3.jpg" alt="">
                                 </figure>
@@ -240,7 +249,7 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="c-text">
+                        <div class="c-text wow fadeInRight fast">
                             <figure>
                                 <img src="assets/images/img5.jpg" alt="">
                             </figure>
@@ -286,7 +295,7 @@
         <section class="block">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm col-lg-7">
+                    <div class="col-sm-12">
                         <h2 class="c-title">um projeto que comporta um <span class="green">programa</span> diversificado de usos</h2>
                         <div class="c-text">
                             <p>
@@ -294,8 +303,60 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm col-lg-4 offset-lg-1">
-                        INFOGRAFIA GOES HERE
+                    <div class="col-sm-12">
+                        <div id="c-blueprint">
+                            <div class="inner">
+                                <ul class="filters">
+                                    <li id="filter-1"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                    <li id="filter-2"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                    <li id="filter-3"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                    <li id="filter-4"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                    <li id="filter-5"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                    <li id="filter-6"><img src="https://via.placeholder.com/50x50" alt=""></li>
+                                </ul>
+                                <ul class="blueprints">
+                                    <li id="blueprint-0" class="active"><img src="https://via.placeholder.com/250x150?text=Planta+0" alt=""></li>
+                                    <li id="blueprint-1"><img src="https://via.placeholder.com/250x150?text=Planta+1" alt=""></li>
+                                    <li id="blueprint-2"><img src="https://via.placeholder.com/250x150?text=Planta+2" alt=""></li>
+                                    <li id="blueprint-3"><img src="https://via.placeholder.com/250x150?text=Planta+3" alt=""></li>
+                                    <li id="blueprint-4"><img src="https://via.placeholder.com/250x150?text=Planta+4" alt=""></li>
+                                    <li id="blueprint-5"><img src="https://via.placeholder.com/250x150?text=Planta+5" alt=""></li>
+                                    <li id="blueprint-6"><img src="https://via.placeholder.com/250x150?text=Planta+6" alt=""></li>
+                                </ul>
+                            </div>
+
+                            <div class="modals">
+                                <div class="c-modal" id="modal-1">
+                                    <button class="modal-close">Fechar</button>
+                                    <div class="modal-inner">
+                                        <h1 class="title">Habitação</h1>
+                                        <div class="c-text text-wrapper">
+                                            <ul>
+                                                <li><b>Espaço de uso Público:</b> 3 685 m2; espaço com intensas zonas de verde e água, com condições para o desenvolvimento de atividades artísticas e culturais. Através de diversos atravessamentos a praça promove a circulação de pessoas ao longo do, potenciando as relações do quarteirão com a envolvente próxima;​</li>
+                                                <li><b>Equipamento:</b> 1.400,00 m2, consistirá num espaço multiusos de âmbito cultural​</li>
+                                                <li><b>Comércio:</b>  2970,28 m2; Supermercado;​</li>
+                                                <li><b>Estacionamento:</b>​<br><i>Parque Privado:</i>179 carros + 11 motas​<br><i>Parque Público:</i>387 carros + 22 motas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-modal" id="modal-2">
+                                    <button class="modal-close">Fechar</button>
+                                    <div class="modal-inner">
+                                        <h1 class="title">Habitação</h1>
+                                        <div class="c-text text-wrapper">
+                                            <ul>
+                                                <li><b>Espaço de uso Público:</b> 3 685 m2; espaço com intensas zonas de verde e água, com condições para o desenvolvimento de atividades artísticas e culturais. Através de diversos atravessamentos a praça promove a circulação de pessoas ao longo do, potenciando as relações do quarteirão com a envolvente próxima;​</li>
+                                                <li><b>Equipamento:</b> 1.400,00 m2, consistirá num espaço multiusos de âmbito cultural​</li>
+                                                <li><b>Comércio:</b>  2970,28 m2; Supermercado;​</li>
+                                                <li><b>Estacionamento:</b>​<br><i>Parque Privado:</i>179 carros + 11 motas​<br><i>Parque Público:</i>387 carros + 22 motas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,26 +376,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm col-lg-7">
-                        <h2 class="c-title">Estudo de <span class="green">Impacto socio economico</span></h2>
+                        <h2 class="c-title big">Estudo de <span class="green">Impacto socio economico</span></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm col-lg-4 offset-lg-1">
                         <div class="c-counter">
                             <img src="https://via.placeholder.com/50x50" alt="">
-                            <p><span class="numscroller">834</span> postos de trabalho</p>
+                            <p><span class="numscroller" data-min='1' data-max='834' data-delay='5' data-increment='2'>834</span> postos de trabalho</p>
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="c-counter">
                             <img src="https://via.placeholder.com/50x50" alt="">
-                            <p><span class="numscroller">65 M</span> de investimento</p>
+                            <p><span class="numscroller" data-min='1' data-max='65' data-delay='5' data-increment='2'>65 M</span> de investimento</p>
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="c-counter">
                             <img src="https://via.placeholder.com/50x50" alt="">
-                            <p><span class="numscroller">23 %</span> crescimento comércio local</p>
+                            <p><span class="numscroller" data-min='1' data-max='23' data-delay='5' data-increment='2'>23 %</span> crescimento comércio local</p>
                         </div>
                     </div>
                 </div>
@@ -487,7 +548,7 @@
                         </div>
                         <div class="col-sm-12 col-md-4">
                             <a href="/" class="site-logo" rel="home">
-                                <img src="https://via.placeholder.com/100x50" alt="Qurteirão da Portugália">
+                                <img src="assets/images/logo-white.svg" alt="Qurteirão da Portugália">
                             </a>
                         </div>
                     </div>
@@ -503,6 +564,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/menuspy.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/numscroller-1.0.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

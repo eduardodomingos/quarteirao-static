@@ -1,0 +1,71 @@
+#c-blueprint {
+    .home & {
+        .inner {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: $blueprintMaxWidth;
+            margin: 0 auto;
+            @include mq($from: tablet) {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+        }
+        .filters {
+            list-style: none;
+            margin: 0;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            @include mq($from: tablet) {
+                width: auto;
+                margin-bottom: 0;
+                flex-direction: column;
+            }
+            li {
+                padding: 0 8px;
+                opacity: .5;
+                cursor: pointer;
+                &.active {
+                    opacity: 1;
+                }
+                @include attention() {
+                    opacity: 1;
+                }
+                @include mq($from: tablet) {
+                    padding: 8px 0;
+                }
+            }
+        }
+
+        .blueprints {
+            list-style: none;
+            margin: 0;
+            position: relative;
+            width: 100%;
+            @include mq($from: tablet) {
+                width: 86%;
+            }
+            li {
+                position: relative;
+                opacity: 0;
+                transition: $transition;
+                &.active {
+                    opacity: 1;
+                }
+                &:not(:first-child) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

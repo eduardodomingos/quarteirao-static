@@ -6,7 +6,7 @@
             $body:               $('body'),
             $siteHeader:         $('#site-header'),
             $siteSideNav:        $('#site-side-nav'),
-            $siteSideNavClose:        $('#site-side-nav .side-nav-close'),
+            $siteSideNavClose:   $('#site-side-nav .side-nav-close'),
         };
 
         var breakpoints = {
@@ -42,7 +42,7 @@
             // Timeline
             $('.c-timeline .event').click(function(){
                 var id = $(this).attr('id');
-                var $modal = $('.c-timeline .modal#modal-' + id.split('-')[1]);
+                var $modal = $('.c-timeline .c-modal#modal-' + id.split('-')[1]);
                 if($modal.find('.modal-slider').length) {
                     $('.modal-slider').slick({
                         arrows: false,
@@ -53,17 +53,29 @@
                 $modal.addClass('active');
             });
 
-            $('.c-timeline .modal .modal-close').click(function(){
+            $('.c-modal .modal-close').click(function(){
 
                 var $modal = $(this).parent();
                 if($modal.find('.modal-slider').length) {
                     var $slider = $modal.find('.modal-slider');
-                    console.log('fds');
                     if($slider.hasClass('slick-initialized')){
                         $slider.slick('unslick');
                     }
                 }
                 $modal.removeClass('active');
+            });
+
+            // Blueprint
+            $('#c-blueprint .filters li').click(function(){
+                $(this).siblings( ".active" ).removeClass('active');
+                $(this).addClass('active');
+                var id = $(this).attr('id');
+                var $blueprint = $('#c-blueprint #blueprint-' + id.split('-')[1]);
+                var $modal = $('#c-blueprint #modal-' + id.split('-')[1]);
+                $modal.siblings( ".active" ).removeClass('active');
+                $modal.addClass('active');
+                $('#c-blueprint .blueprints .active').removeClass('active');
+                $blueprint.addClass('active');
             });
 
 
@@ -139,6 +151,8 @@
             dom.$body.removeClass('side-nav-open');
         });
 
+        new WOW().init();
+
         // ######################################################
         // Global Functions
         // ######################################################
@@ -155,6 +169,9 @@
             .insertBefore( '#site-header' )
             .attr( 'id', function(i, str) { return str + '-cloned';} );
             dom.$siteHeaderClone = $('#site-header-cloned');
+            var src = dom.$siteHeaderClone.find('.site-logo img').attr('src').replace("white", "black");
+            dom.$siteHeaderClone.find('.site-logo img').attr('src', src);
+            
             var winH = dom.$window.height();   // Get the window height.
 
             dom.$window.on("scroll", function () {

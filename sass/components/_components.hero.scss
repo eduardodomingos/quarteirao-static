@@ -21,6 +21,7 @@
         li {
             @extend %headings;
             color: $color-white;
+            margin: 0;
             @include inuit-font-size(30px, 30px);
 
             @include mq($from: desktop) {
