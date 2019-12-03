@@ -103,25 +103,33 @@
             background: rgba($color-black, .85);
             color: $color-white;
             position: fixed;
-            left: 0;
+            width: $timelineModal-width-s;
             top: 0;
+            left: -$timelineModal-width-s;
             z-index: 1;
+            transition: $transition;
+            &.active {
+                left: 0;
+            }
             @include mq($from: desktop) {
-                width: 480px;                
+                width: $timelineModal-width-d;
+                left: -$timelineModal-width-d - 10px;;         
             }
         
             .modal-close {
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 10px;
+                right: 10px;
             }
             
-
             .modal-inner {
-                padding: 80px 50px;
+                padding: 60px 50px;
                 display: flex;
                 flex-direction: column;
                 height: 100%;
+                @include mq($from: desktop) {
+                    padding: 80px 50px;
+                }
                 .modal-slider {
                     list-style: none;
                     margin: 0;

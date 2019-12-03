@@ -4,6 +4,9 @@
     @include font-weight('regular'); 
     font-style: italic;
     text-align: justify;
+    @include mq($from: desktop) {
+        @include inuit-font-size(14px, 25px);
+    }
 
     ul {
         font-family: $font-sans;
